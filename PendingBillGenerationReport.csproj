@@ -74,6 +74,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="bin\Debug\PendingBillGenerationReport.exe.config" />
+    <None Include="Content\Demo.xlsx" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\PendingBillGenerationReport.csproj.AssemblyReference.cache" />
     <None Include="obj\Debug\PendingBillGenerationReport.csproj.CopyComplete" />
@@ -98,6 +99,7 @@
     <Content Include="bin\EPPlus.System.Drawing.dll" />
     <Content Include="bin\ExcelNumberFormat.dll" />
     <Content Include="bin\FastMember.dll" />
+    <Content Include="Content\MailTemplate.html" />
     <Content Include="obj\Debug\PendingBillGenerationReport.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\PendingBillGenerationReport.exe" />
     <Content Include="obj\Debug\PendingBillGenerationReport.pdb" />

@@ -272,8 +272,8 @@ namespace PendingBillGenerationReport
                     body = reader.ReadToEnd();
                 }
 
-                body = body.Replace("[date]", DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss.ff"));
-                var strMailSubject = "Pending Bill Generation - " + DateTime.Today.ToString("dd-MM-yyyy");
+                body = body.Replace("[date]", DateTime.Now.ToString("dd/MM/yyyy"));
+                var strMailSubject = "Pending Bill Generation - " + DateTime.Today.ToString("dd/MM/yyyy");
 
                 var ToEmailId = getconfigSetting("PendingBillGenerateToEmailId");
                 var CcEmailId = getconfigSetting("PendingBillGenerateCCEmailId");
