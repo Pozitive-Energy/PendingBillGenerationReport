@@ -235,7 +235,7 @@ namespace PendingBillGenerationReport
                         dtlWs?.Columns().AdjustToContents();
                         wb.SaveAs(FileSavePath);
                     }
-                    return fileNameWithExt;
+                    return FileSavePath;
                 }
             }
             catch (Exception ex)
@@ -248,7 +248,7 @@ namespace PendingBillGenerationReport
                 throw new Exception("Generate Excel" + "(" + ex.Message + ")");
             }
 
-            return fileNameWithExt;
+            return "";
         }
         static void getmailinformation(string GetPendingBillReportExcel)
         {
@@ -258,14 +258,12 @@ namespace PendingBillGenerationReport
                 string PendingBillReportFilePath = getconfigSetting("PendingBillReportFilePath");
                 string body = string.Empty;
                 string FileSavePath = "";
-                string folderPath = Path.Combine(PendingBillReportFilePath, "PendingBillReportFilePath");
+                //string folderPath = Path.Combine(PendingBillReportFilePath, "PendingBillGenerationReport");
 
-                if (!Directory.Exists(folderPath))
-                {
-                    Directory.CreateDirectory(folderPath);
-                }
 
-                FileSavePath = Path.Combine(folderPath, GetPendingBillReportExcel);
+
+                //FileSavePath = Path.Combine(folderPath, GetPendingBillReportExcel);
+                FileSavePath = GetPendingBillReportExcel;
                 var MailTemplatePath = PendingBillReportFilePath + @"\Content\MailTemplate.html";
                 using (StreamReader reader = new StreamReader(MailTemplatePath))
                 {
